@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 5px;
+}
+
+body {
+    font-family: 'Potta One', cursive;
+    position: relative;
+    display: flex;
+    height: 100vh;
+    color: black;
+    background-size: 100vw;
+    background-image: url('../img/afternoon.jpg');
+    background-repeat: no-repeat;
+    background-color: #502d82;
+    color: rgb(255, 225, 0);
+    align-items: left;
+    flex-direction: column;
+}
+
+#time {
+    font-size: 6rem;
+    letter-spacing: 5px;
+}
+
+h1 {
+    margin-bottom: 3rem;
+    box-sizing: content-box;
+    width: max-content;
+    border-top: yellow 6px solid;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    text-align: center;
+    align-content: left;
+    max-width: max-content;
+}
+
+#time:hover, h1:hover, h2:hover {
+    text-shadow:    2px 2px 10px rgba(255, 0, 191, 0.9), 
+                    2px 2px 10px rgba(255, 0, 191, 0.7), 
+                    2px 2px 10px rgba(255, 0, 191, 0.5), 
+                    2px 2px 10px rgba(255, 0, 191, 0.1), 
+                    -2px -2px 10px rgba(255, 0, 191, 0.9), 
+                    -2px -2px 10px rgba(255, 0, 191, 0.7), 
+                    -2px -2px 10px rgba(255, 0, 191, 0.5), 
+                    -2px -2px 10px rgba(255, 0, 191, 0.1);   
+}
+
+@media (max-width: 700px) {
+    #time {
+        font-size: 4rem;
+    }
+}
