@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Bingo</title>
+
+    <style>
+        :root{
+            --redLine:      rgb(100, 25, 25);
+            --redHover:     rgba(100, 25, 25, 0.5);
+            --greenSquare:  rgb(12, 99, 4);
+            --greenHover:   rgba(12, 99, 4, 0.5);
+            --whiteSquare:  rgb(255, 255, 255);
+            --whiteHover:   rgba(255, 255, 255, 0.5);
+            --fullBoard:    rgb(166, 169, 10);
+            --fullHover:    rgba(166, 169, 10, 0.5);
+            --bgColor:      rgb(67, 95, 157);
+            --bgCards:      rgb(42, 67, 121);
+            --bgShadow:     rgba(249, 252, 90, 0.2);
+        }      
+
+        body {
+            height: 100vh;
+        }
+
+        #title {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .box {
+            position:relative;
+            display:flex;
+            box-sizing:border-box;
+            align-items: center;
+            justify-content: center;
+            margin:5px;
+            padding: 2px;
+            border: solid rgb(18, 90, 0) 2px;
+            float:left;
+            text-align:center;
+            font-weight:bold;
+            font-size: 25px;
+            background-color: white;
+        }
+
+        .board > .box:hover{
+            cursor:pointer;
+        }
+
+        .board {
+            height: 1000px;
+            position:absolute;
+            display:grid;
+            width:98%;
+            grid: 20% 20% 20% / 20% 20% 20% 20% 20%;
+            min-width: 950px;
+            z-index:1000;
+        }
+
+        body {
+            position: relative;
+            background-color:var(--bgColor)
+        }
+
+        .backBlock {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background: var(--bgCards);
+            box-shadow: 10px 10px 50px var(--bgShadow);
+        }
+
+        #backgr {
+            position: absolute;
+            height: 80vh;
+            width: 80vw;
+            z-index: -1;
+        }
+
+        @keyframes random1 {
+            20%     {top: 100%;  left: 20%;   }
+            40%     {top: 80%;  left: 50%;    }
+            60%     {top: 40%;  left: 100%;   }
+            80%     {top: 0%;   left: 90%;    }
+            100%    {top: 10%;  left: 80%;    }
+        }
+
+        @keyframes random2 {
+            20%     {top: 10%;  left: 0%;    }
+            40%     {top: 0%;   left: 10%;     }
+            60%     {top: 40%;  left: 50%;    }
+            80%     {top: 60%;  left: 40%;    }
+            100%    {top: 95%;  left: 80%;     }
+        }
+
+        @keyframes random3 {
+            20%     {top: 0%;      left: 50%;    }
+            40%     {top: 20%;     left: 40%;    }
+            60%     {top: 50%;     left: 60%;    }
+            80%     {top: 60%;     left: 100%;   }
+            100%    {top: 100%;    left: 80%;    }
+        }
+
+    </style>
+    <script type="text/javascript" src="./BingoCards.js"></script>
+
+    <script type="text/javascript">
+    "use strict";
+
+    // Create Bingo Card
+    function createCard(card) {
+        var buzzwords = (card.options)
+
+        var cardValues = [];
+
+        for (var i=1; i<16; i++) {
+            var valueIndex = Math.floor(Math.random() * buzzwords.length);
+            var boxValue = buzzwords.slice(valueIndex, valueIndex+1);
+            buzzwords.splice(valueIndex, 1);
+
+            var box = document.getElementById(i.toString());
+            box.innerHTML = boxValue;
+            box.style.height = box.width;
+        };
+    };
+
+    // Values to save status
+    var checked = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+
+    // Check/Uncheck Values
+    function tick(id) { checked[id-1] = !checked[id-1]; };
+    function checkOff(e) {
+        switch (e) {
+            case 1:  tick(e); break;
+            case 2:  tick(e); break;
+            case 3:  tick(e); break;
+            case 4:  tick(e); break;
+            case 5:  tick(e); break;
+            case 6:  tick(e); break;
+            case 7:  tick(e); break;
+            case 8:  tick(e); break;
+            case 9:  tick(e); break;
+            case 10: tick(e); break;
+            case 11: tick(e); break;
+            case 12: tick(e); break;
+            case 13: tick(e); break;
+            case 14: tick(e); break;
+            case 15: tick(e); break;
+        };
+        setColours(e);
+    };
+
+ 
+
+    // Manage board colours
+    function setColours(id) {
+        var winCondition = checked.indexOf(false) == -1;
+
+        function assignColors(i) {
+            function whichLine(z) {
+                switch (z) {
+                    case "top": return {start:0, end:4};    break;
+                    case "mid": return {start:5, end:9};    break;
+                    case "bot": return {start:10, end:14};  break;
+                };
+            };
+
+            function row(r) {
+                if (r < 6) return "top";
+                else if (r < 11) return "mid";
+                else if (r < 16) return "bot";
+            };
+
+            function checkLine() { return checked.slice(line.start, line.end+1).indexOf(false) == -1; };
+
+            var tc = "white", bg;
+            var cl = row(i+1);      
+            var line = whichLine(cl);
+
+            if (winCondition) bg = "var(--fullBoard)";
+            else if (checkLine()) bg = "var(--redLine)";
+            else if (checked[i]) bg = "var(--greenSquare)";
+            else {
+                bg = "var(--whiteSquare)";
+                tc = "black";
+            };
+
+            return {text:tc, tile:bg};
+        };
+
+       
+
+        for (var i=1; i<=15; i++) {
+            var colors = assignColors(i-1);        
+            document.getElementById(i.toString()).style.backgroundColor = colors.tile;
+            document.getElementById(i.toString()).style.color = colors.text;
+        };
+
+        
+    };
+
+    function highlight(id) {
+        setColours(id);
+
+        function getHL(h) {
+            switch (h) {
+                case "var(--fullBoard)":    return "var(--fullHover)";  break;
+                case "var(--redLine)":      return "var(--redHover)";   break;
+                case "var(--greenSquare)":  return "var(--greenHover)"; break;
+                case "var(--whiteSquare)":  return "var(--whiteHover)"; break;
+            };
+        };
+
+        var currentColour = document.getElementById(id.toString()).style.backgroundColor;
+        var hlColor = getHL(currentColour);
+        document.getElementById(id.toString()).style.backgroundColor = hlColor;
+    };
+
+ 
+
+    // Background FX
+    function bgFx() {
+        function ani() {
+            var choseRandom = Math.random();
+            if (choseRandom < 0.34) return "random1";
+            else if (choseRandom < 0.67) return "random2";
+            else return "random3";
+        };
+        var backDrop = document.getElementById("backgr");
+
+        for (var i=0; i<100; i++) {
+            var backBlocks = document.createElement("div");
+            var left = (Math.random() * 100).toString() + "vw;";
+            var top = (Math.random() * 100).toString() + "vh;";
+            var duration = ((Math.floor(Math.random() * 85)) + 5).toString() + "s";
+            var delayDir = Math.random() < 0.5 ? "" : "-";
+            var delayDur = (Math.floor(Math.random() * 10)).toString() + "s";
+
+            backBlocks.classList.add("backBlock");
+            backBlocks.style = "animation: " + ani() + " " + duration + " " + delayDir + delayDur + " alternate infinite; left:" + left + "; top: "+ top + ";";
+
+            backDrop.appendChild(backBlocks);
+        };
+    };
+
+ 
+
+    function play() {
+        var chosenCard = cards[Math.floor(Math.random()*4)];
+        var title = document.getElementById('title').innerText = chosenCard.title;
+        createCard(chosenCard);  
+        bgFx();
+    };
+
+    </script>
+</head>
+
+ 
+
+<body onload="play()">
+    <div id="backgr"></div>
+    <h2 id="title"></h2>    
+    <div class="board">
+        <button id="1"  class="box top" onclick="checkOff(1)"  onmousemove="highlight(1)"  onmouseout="setColours()"></button>
+        <button id="2"  class="box top" onclick="checkOff(2)"  onmousemove="highlight(2)"  onmouseout="setColours()"></button>
+        <button id="3"  class="box top" onclick="checkOff(3)"  onmousemove="highlight(3)"  onmouseout="setColours()"></button>
+        <button id="4"  class="box top" onclick="checkOff(4)"  onmousemove="highlight(4)"  onmouseout="setColours()"></button>
+        <button id="5"  class="box top" onclick="checkOff(5)"  onmousemove="highlight(5)"  onmouseout="setColours()"></button>
+        <button id="6"  class="box mid" onclick="checkOff(6)"  onmousemove="highlight(6)"  onmouseout="setColours()"></button>
+        <button id="7"  class="box mid" onclick="checkOff(7)"  onmousemove="highlight(7)"  onmouseout="setColours()"></button>
+        <button id="8"  class="box mid" onclick="checkOff(8)"  onmousemove="highlight(8)"  onmouseout="setColours()"></button>
+        <button id="9"  class="box mid" onclick="checkOff(9)"  onmousemove="highlight(9)"  onmouseout="setColours()"></button>
+        <button id="10" class="box mid" onclick="checkOff(10)" onmousemove="highlight(10)" onmouseout="setColours()"></button>
+        <button id="11" class="box bot" onclick="checkOff(11)" onmousemove="highlight(11)" onmouseout="setColours()"></button>
+        <button id="12" class="box bot" onclick="checkOff(12)" onmousemove="highlight(12)" onmouseout="setColours()"></button>
+        <button id="13" class="box bot" onclick="checkOff(13)" onmousemove="highlight(13)" onmouseout="setColours()"></button>
+        <button id="14" class="box bot" onclick="checkOff(14)" onmousemove="highlight(14)" onmouseout="setColours()"></button>
+        <button id="15" class="box bot" onclick="checkOff(15)" onmousemove="highlight(15)" onmouseout="setColours()"></button>
+    </div>
+
+</body>
+
+</html>
