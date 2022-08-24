@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/practice-travel-web/static/css/main.3b2fad3d.css",
+    "main.js": "/practice-travel-web/static/js/main.b59f55ca.js",
+    "static/media/heroVid.mp4": "/practice-travel-web/static/media/heroVid.f4f90898fbacdce90583.mp4",
+    "static/media/jeep.jpg": "/practice-travel-web/static/media/jeep.5d8126599f1f990611a6.jpg",
+    "static/media/birds.jpg": "/practice-travel-web/static/media/birds.119d9ca21fa842944118.jpg",
+    "static/media/mountains.jpg": "/practice-travel-web/static/media/mountains.76bbaafdbf9f77efb7c5.jpg",
+    "static/media/foodTable.jpg": "/practice-travel-web/static/media/foodTable.a7f7b9b2dcf95d5f3879.jpg",
+    "static/media/foodGirl.jpg": "/practice-travel-web/static/media/foodGirl.83a80254e2a8269eec56.jpg",
+    "static/media/coffee.jpg": "/practice-travel-web/static/media/coffee.219802c499eb845d91f6.jpg",
+    "static/media/girlOnPhone.jpg": "/practice-travel-web/static/media/girlOnPhone.511339f67b764f734bd2.jpg",
+    "static/media/bike.jpg": "/practice-travel-web/static/media/bike.c3b43e2f307c29184db2.jpg",
+    "static/media/sand.jpg": "/practice-travel-web/static/media/sand.2f49fa861af44d106d20.jpg",
+    "static/media/shellBuilding.jpg": "/practice-travel-web/static/media/shellBuilding.d2d77c010d1166a38b37.jpg",
+    "static/media/mount.jpg": "/practice-travel-web/static/media/mount.a5fb3edb63f1b00daf2e.jpg",
+    "index.html": "/practice-travel-web/index.html",
+    "main.3b2fad3d.css.map": "/practice-travel-web/static/css/main.3b2fad3d.css.map",
+    "main.b59f55ca.js.map": "/practice-travel-web/static/js/main.b59f55ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b2fad3d.css",
+    "static/js/main.b59f55ca.js"
+  ]
+}
