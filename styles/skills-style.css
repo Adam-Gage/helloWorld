@@ -1,0 +1,95 @@
+#skills {
+    position: relative;
+    text-align: center;
+}
+
+.skillset {
+    position: relative;
+    display: flex;
+    grid: 1fr 2fr;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    border: var(--color-light) 2px solid;
+    padding: .5rem;
+    margin: 1rem;
+}
+
+.skillset h4 {
+    color: var(--color-highlight);
+}
+
+.skillset p {
+    color: #fff;
+    font-size: small;
+}
+
+.skill-desc {
+    width: 70%;
+}
+
+#contain-skill {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-around;
+}
+
+.skill-logo > img {
+    height: 4rem;
+}
+
+.level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: .5rem;
+    background-color: var(--color-highlight);
+}
+
+#js-level, 
+#html-level {
+    width: 95%;
+}
+
+#css-level, 
+#blender-level {
+    width: 80%;
+}
+
+#react-level {
+    width: 60%;
+}
+
+#jquery-level,
+#unity-level {
+    width: 20%;
+}
+
+#prem-pro-level {
+    width: 70%;
+}
+
+.skill-logo {
+    background-image: linear-gradient(45deg, var(--color-highlight), var(--color-mid));
+    height: 4rem;
+    width: 4rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}
+
+#jq-logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.job-label {
+    color: var(--color-highlight);
+}
+
+.job-loc {
+    color: var(--color-light);
+}

@@ -1,0 +1,5 @@
+#about {
+    color: var(--color-highlight);
+    z-index: 1;
+    position: relative;
+}

@@ -1,0 +1,45 @@
+#projects {
+    position: relative;
+}
+
+.project-pic > img {
+    height: 10rem;
+}
+
+.contain-projects {
+    display: flex;
+    grid: 2fr 1fr;
+    grid-gap: .5rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    border: var(--color-light) 2px solid;
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+#project-info {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+
+.bingo-img {
+    height: 10rem;
+}
+
+.project-name {
+    color: var(--color-highlight);
+}
+
+.project-desc {
+    color: white;
+}
+
+.project-desc > a {
+    color: grey;
+}

@@ -1,0 +1,26 @@
+#contacts {
+    color: var(--color-grey);
+}
+
+#fname,
+#femail {
+    border: inset 4px var(--color-accent);
+    border-radius: 7px;
+    margin: 0.5rem 2rem;
+}
+
+#fmessage {
+    width: 50vw;
+    height: 6rem;
+    color: green;
+    border: inset 4px var(--color-accent);
+    border-radius: 7px;
+}
+
+#fsubmit {
+    border-radius: 7px;
+    background-color: var(--color-accent);
+    color: white;
+    width: 50vw;
+
+}

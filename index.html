@@ -2,16 +2,267 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Icon Fill Hover Effect</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="./styles/contact-style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/previous-style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/project-style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/skills-style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/current-style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/about-style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/hero-style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+    <title>Adam Gage</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <ul>
-        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-    </ul>
+    <section id="home-hero" class="container">
+        <div id="hero-bg">
+            <video id="hero-vid" autoplay muted loop>
+                <source src="./3.mp4">
+                Your browser does not support the video tag
+            </video>
+        </div>
+        <div id="name">
+            <h4 id="nameplate">Adam Gage</h4>
+            <h2 id="job-title">Web Application Development</h2>
+        </div>
+        <div class="partition">
+            <div class="light-strip"></div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div id="about-info" class="info">
+            <h3 class="title">About Me</h3>
+            <p>
+                Confident with front end development with strong JavaScript abilities (including React with some experience of React Native) I am a diligent, loyal and adaptable employee. I am always learning using online tools in my spare time to learn new skills. From 3D modeling to game programming to video editing I am always learning new tools and working on projects.
+            </p>
+            <p>
+                Years of working within the NHS has given me ample experience in adhering to strict guidelines, operating as part of a team while also able to perform duties individually and completing objectives to firm deadlines. While I have enjoyed my current employment my aim is to pursue a new career path, external to the NHS, to broaden my horizons and experience a higher level of responsibility.
+            </p>
+            <p>
+                I have always been technical minded and I am the IT support for everyone around me, I enjoy being able to help people and love solving problems. I believe that I would prove to be an indispensable member of any team.
+            </p>
+        </div>
+        <div class="partition">
+            <div class="light-strip"></div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <div id="skills-info" class="info">
+            <h3 class="title" style="text-align: right;">Skills</h3>
+            <div id="contain-skill">
+                <div id="js" class="skillset">
+                    <div class="skill-logo">
+                        <img src="./imgs//programs/js.png" alt="JS Logo">
+                    </div>
+                    <div class="skill-desc">
+                        <h4 class="skill-name">JavaScript</h4>
+                        <p>Used in my day-to-day professional role JavaScript is my strongest language</p>
+                        <div id="js-level" class="level"></div>
+                    </div>
+                </div>
+                <div id="html" class="skillset">
+                    <div class="skill-logo">
+                        <img src="./imgs/programs/html.png" alt="HTML5 Logo">
+                    </div>
+                    <div class="skill-desc">
+                        <h4 class="skill-name">HTML5</h4>
+                        <p>Using HTML to a lesser exent in my professional role I feel confident in my abilities</p>
+                        <div id="html-level" class="level"></div>
+                    </div>
+                </div>
+                <div id="css" class="skillset">
+                    <div class="skill-logo">
+                        <img src="./imgs/programs/css.png" alt="CSS3 Logo">
+                    </div>
+                    <div class="skill-desc">
+                        <h4 class="skill-name">CSS3</h4>
+                        <p>With minimal CSS allowed in my role most of my experience comes from personal projects but I am very capable with this language</p>
+                        <div id="css-level" class="level"></div>
+                    </div>
+                </div>
+                <div id="react" class="skillset">
+                    <div class="skill-logo">                        
+                        <img src="./imgs/programs/React.png" alt="React Logo">
+                    </div>
+                    <div class="skill-desc">
+                        <h4 class="skill-name">React</h4>
+                        <p>While not used in a professional capacity this is my preferred framework when creating personal projects</p>
+                        <div id="react-level" class="level"></div>
+                    </div>
+                </div>
+                <div id="jquery" class="skillset">
+                    <div class="skill-logo">
+                        <img id="jq-logo" src="./imgs/programs/jquery.png" alt="jQuery Logo">
+                    </div>
+                    <div class="skill-desc">
+                        <h4 class="skill-name">jQuery</h4>
+                        <p>I have had limited but successful experience, including parts of this webpage.</p>
+                        <div id="jquery-level" class="level"></div>
+                    </div>
+                </div>
+                <div id="prem-pro" class="skillset">
+                    <div class="skill-logo">
+                        <img src="./imgs/programs/prem-pro.png" alt="Premiere Pro Logo">
+                    </div>
+                    <div class="skill-desc">
+                        <h4 class="skill-name">Premiere Pro</h4>
+                        <p>I have collaborated with a close friend on launching a YouTube channel and I have edited several videos using Premiere Pro for this channel as well as his personal channel.</p>
+                        <p>Please feel free to check us out at <a href="https://www.youtube.com/channel/UCIqWmL8BF51F4S7sx8yEW4Q/featured" target="_blank">Ready Set Riff</a></p>
+                        <div id="prem-pro-level" class="level"></div>
+                    </div>
+                </div>
+                <div id="blender" class="skillset">
+                    <div class="skill-logo">
+                        <img src="./imgs/programs/blender.png" alt="Blender Logo">
+                    </div>
+                    <div class="skill-desc">
+                        <h4 class="skill-name">Blender</h4>
+                        <p>Using Blender I have created several assets for personal animation and game projects.</p>
+                        <div id="blender-level" class="level"></div>
+                    </div>
+                </div>
+                <div id="unity" class="skillset">
+                    <div class="skill-logo">
+                        <img src="./imgs/programs/unity.png" alt="Unity Logo">
+                    </div>
+                    <div class="skill-desc">
+                        <h4 class="skill-name">Unity</h4>
+                        <p>I have created several practice prototypes to get used to the platform, I am familar with the basics but still require experience.</p>
+                        <div id="unity-level" class="level"></div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+        <div class="partition">
+            <div class="light-strip"></div>
+        </div>
+    </section>
+
+    <section id="current" class="container">
+        <div id="current-info" class="info">
+            <h3 class="title">Current Employment</h3>
+            <h4 class="job-label">WEB APPLICATION DEVELOPER</h4>
+            <h5 class="job-loc">NOTTINGHAM UNIVERSITY HOSPITALS</h5>
+            <p>Currently I make nursing assessments for the <a href="https://nervecentresoftware.com">Nervecentre</a> Electronic Patient Record software using JavaScript.</p>
+            <p>Supplementary responsibilities to this is to manage several live documents, including the trusts nervecentre wiki page and git repository, as well as liaise with others across Digital Services to promote innovation.</p>
+        </div>
+        <div class="partition">
+            <div class="light-strip"></div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <div id="project-info" class="info">
+            <h3 class="title">Projects</h3>
+            <div class="contain-projects">
+                <div class="project-pic">
+                    <img id="si-title-img" src="./imgs/projects/space-inv-title.png" alt="Space Invaders Screen">
+                    <img id="si-gp-img" src="./imgs/projects/space-inv-gp.png" alt="Space Invaders Screen">
+                </div>
+                <div class="project-desc">
+                    <h4 class="project-name">Space Invaders</h4
+                    <p>Class Based JavaScript</p>
+                    <p>Games have always been a passion of mine so I could not think of a better introduction to learning JavaScript classes than recreating this classic game. A simple homage taught me the basics necessary to build something that can while away an hour or two.</p>
+                    <a id="si-game" href="" onClick="popOutWindow('./projects/Space Invader/game.html', 1024, 1024)">Pop up window</a> ||
+                    <a href="./projects/Space Invader/game.html" target="_blank"> New tab</a>
+                </div>
+            </div>
+            <div class="contain-projects">
+                <div class="bingo-project-pic">
+                    <img class="bingo-img" src="./imgs/projects/bands-bingo.png" alt="Band Bingo">
+                    <img class="bingo-img" src="./imgs/projects/movie-bingo.png" alt="Movie Bingo">
+                    <img class="bingo-img" src="./imgs/projects/comedian-bingo.png" alt="Comedian Bingo">
+                    <img class="bingo-img" src="./imgs/projects/animal-bingo.png" alt="Animal Bingo">
+                </div>
+                <div class="project-desc">
+                    <h4 class="project-name">Random Bingo</h4
+                    <p>Created with Vanilla JavaScript</p>
+                    <p>A small project where JavaScript is used to affect CSS properties as well as animating a background in pure css</p>
+                    <a id="bingo-link" href="" onClick="popOutWindow('./projects/Bingo/Bingo.html', 1024, 1024)">Pop up window</a> ||
+                    <a href="./projects/Bingo/Bingo.html" target="_blank"> New tab</a>
+                </div>
+            </div>
+            <div class="contain-projects">
+                <div class="project-pic">
+                    <img src="./imgs/projects/travel.png" alt="Travel Page">
+                </div>
+                <div class="project-desc">
+                    <h4 class="project-name">Travel App</h4
+                    <p>Created using React</p>
+                    <p>Confident in my base JavaScript skills and eager to branch into JavaScript frameworks I selected React as it is the most popular framework at the time. I decided to learn this with a more professional project over yet another game to display my skills as a more serious developer.</p>
+                </div>
+            </div>
+            <div class="contain-projects">
+                <div class="project-pic">
+                    <img src="./imgs/projects/movie.png" alt="Movie Search Page">
+                </div>
+                <div class="project-desc">
+                    <h4 class="project-name">Movie App</h4
+                    <p>Created using React incorporating a backend REST API</p>
+                    <p>Excited from exploring a new framework this project was made to learn how to incorporate dynamic data from a REST API. Movies are another passion of mine and this inspired me to create a simpler IMDB.</p>
+                </div>
+            </div>
+            <div class="contain-projects">
+                <div class="project-pic">
+                    <img src="./imgs/projects/weather.png" alt="Space Invaders Screen">
+                </div>
+                <div class="project-desc">
+                    <h4 class="project-name">Weather App</h4
+                    <p>Created using Vaniila JavaScript with a REST API</p>
+                    <p>After successfully implementing a backend API I wanted to ensure I was able to apply this to a pure project without relying on frameworks.</p>
+               </div>
+            </div>
+        </div>
+        <div class="partition">
+            <div class="light-strip"></div>
+        </div>
+    </section>
+
+    <section id="previous" class="container">
+        <div id="previous-info" class="info">
+            <h3 class="title">Previous Employment</h3>
+            <div class="contain-job">
+                <h4 class="job-name">Accredited Clinical Coder</h4>
+                <p class="job-years">2012 - 2017 / 2018 - 2020</p>
+                <p>Clinical coding is the standardisation of medical information into ICD-10 codes for statistical and renumeration purposes. Having worked in multiple NHS trusts from London to Chesterfield this required detailed anatomy and physiology knowledge paired with understanding of medical terminology spanning multiple specialties.</p>
+            </div>
+            <div class="contain-job">
+                <h4 class="job-name">Sales Advisor</h4>
+                <p class="job-years">2017 - 2018</p>
+                <p>Working for a global insurance company providing front line technical support for a well known televison provider this role required trouble shooting television issues with members of the general public. While I excelled at the service side I am more than happy to admit that I am not a natural sales person so I was more than happy to return to the NHS as soon as an appropriate role appeared.</p>
+            </div>
+            <div class="contain-job">
+                <h4 class="job-name">Administrator</h4>
+                <p class="job-years">2008 - 2012</p>
+                <p>Fresh out of university I began my employment journey supporting the clinical coding department in West London.</p>
+            </div>
+        </div>
+        <div class="partition">
+            <div class="light-strip"></div>
+        </div>
+    </section>
+
 </body>
+
+<script>
+    $(document).scroll(function(){
+        // parallax Hero;
+        $("#hero-bg").css("top", (scrollY*0.4));
+        $("#name").css("top", 50 - Math.floor(scrollY*0.07) + "%");
+    });
+
+    function popOutWindow (link, wide, tall) {
+        window.open(link, 'popUpWindow', 'height='+wide+', width='+tall+', left=10, top=10, resizable=no, scrollbars=no, toolbar=no, menubar=no, location=no, directories=no, status=yes');
+    };
+</script>
+
 </html>

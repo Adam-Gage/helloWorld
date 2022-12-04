@@ -1,0 +1,12 @@
+#previous {
+    position:relative;
+}
+
+.job-name {
+    color: var(--color-highlight)
+}
+
+.info .job-years {
+    color: var(--color-light);
+}
+

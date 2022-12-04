@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invader</title>
+
+    <style>
+        @font-face {
+            font-family: "myFont";
+            src: url("./fonts/MetalsmithRegular.ttf");
+        }
+        @font-face {
+            font-family: 'blowme';
+            src: url("./fonts/BlowMe.ttf");
+        }
+        body {
+            margin:0px;
+            padding:0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            max-height: 100vh;
+        }
+        p {
+            position:absolute;
+            z-index:10;
+            color:yellow;
+            left:10px;
+            top:10px;
+            font-family:sans-serif;
+            font-size:18px;
+            margin:0px;
+        }
+        #game{
+            position:relative;
+            height: 100%;
+            overflow:hidden;
+            object-fit: contain;
+        }
+        button{
+            position:absolute;
+            height: 100px;
+            width: 200px;
+            z-index:10;
+            left: 40%;
+            bottom: 10%;
+            background-color: rgba(0,0,0,0);
+            border: solid blue 10px;
+            color: blue;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        canvas {
+            display: absolute;
+            top: 200px;
+        }
+        #space {
+            font-size:400px;
+            color:yellow;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            font-family: 'blowme';
+            display:flex;
+            left: 200px;
+        }
+        #invaders {
+            display:flex;
+            font-size:200px;
+            color:yellow;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            font-family: 'myFont';
+            top: 35%;
+            left: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="game">
+        <p><span>Score: <span id="score"></span></span></p>
+        <div id="space">SPACE</div>
+        <div id="invaders">invaders</div>
+        <canvas></canvas>
+        <button id="button" type="button" onclick="resetGame()">Start</button>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

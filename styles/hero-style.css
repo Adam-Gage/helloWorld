@@ -1,0 +1,144 @@
+
+#home-hero {
+    position: relative;
+    background-color: rgba(15, 15, 35, 0.3);
+    text-align: center;
+    height: 130vh;
+}
+
+#name {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background-color: rgba(15, 15, 35, 0.7);
+    padding-bottom: 1rem;
+}
+
+#job-title {
+    font-size: 1.5rem;
+    color: var(--color-light);
+    margin: 0.5rem;
+}
+
+#hero-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translateZ(-50);
+    z-index: -50;
+}
+
+#hero-vid {
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    height: 150vh;
+    width: 100%;
+    min-width: 100vw;
+}
+
+#nameplate {
+    font-size: 3rem;
+    color: var(--color-highlight);
+    margin: 1rem 0;
+    transform-style: preserve-3d;
+    z-index: 1;
+}
+
+/* Elements for scroll animations */
+/* Stripe 1 */
+#hero-stripe-1 {
+    position: absolute;
+    height: 0;
+    bottom: -2rem;
+    width: 100%;
+    left: 100%;
+    border-left: solid 4rem rgba(0, 0, 0, 0);
+    border-top: none;
+    border-right: none;
+    border-bottom: #064663 4rem solid;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 100px;
+    z-index: 10;
+}
+
+/* Stripe 2 */
+#hero-stripe-2 {
+    position: absolute;
+    height: 0;
+    bottom: 1rem;
+    left: 100%;
+    display: flex;
+    z-index: 20;
+}
+
+#hs2-left {
+    width: 50rem;
+    border-left: solid 1rem rgba(0, 0, 0, 0);
+    border-top: none;
+    border-right: none;
+    border-bottom: var(--color-highlight) 1rem solid;
+}
+
+#hs2-right {
+    width: 1rem;
+    border-left: none;
+    border-top: var(--color-highlight) 1rem solid;
+    border-right: solid 1rem rgba(0, 0, 0, 0);
+    border-bottom: none;
+}
+
+/* Stripe 3 */
+#hero-stripe-3 {
+    position: absolute;
+    height: 0;
+    top: calc(100% + 1.25rem);
+    left: 100%;
+    display: flex;
+    z-index: 10;
+}
+
+#hs3-left {
+    width: 10rem;
+    border-left: solid 1rem rgba(0, 0, 0, 0);
+    border-top: var(--color-accent) 1.5rem solid;
+    border-right: none;
+    border-bottom: none;
+}
+
+#hs3-right {
+    width: 10rem;
+    border-left: none;
+    border-top: none;
+    border-right: solid 1rem rgba(0, 0, 0, 0);
+    border-bottom: var(--color-accent) 1.5rem solid;;
+}
+
+/* Ball */
+#hero-ball {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    top: 105%;
+    left: -150%;
+    display: flex;
+    z-index: 2;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#hb-bl {
+    position: absolute;
+    border-right: solid 1rem rgba(0, 0, 0, 0);
+    border-left: solid 1rem rgba(0, 0, 0, 0);
+    border-top: var(--color-accent) 1.5rem solid;
+    border-bottom: var(--color-accent) 1.5rem solid;
+}
+
+#hb-tr {
+    position: absolute;
+    border-top: solid 1rem rgba(0, 0, 0, 0);
+    border-bottom: solid 1rem rgba(0, 0, 0, 0);
+    border-right: var(--color-light) 1.5rem solid;
+    border-left: var(--color-highlight) 1.5rem solid;
+}
