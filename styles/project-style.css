@@ -1,9 +1,11 @@
 #projects {
     position: relative;
+    width: 100%;
 }
 
 .project-pic > img {
     height: 10rem;
+    object-fit: scale-down;
 }
 
 .contain-projects {
@@ -42,4 +44,24 @@
 
 .project-desc > a {
     color: grey;
+}
+
+@media screen and (max-width: 600px) { 
+    .contain-projects {
+        display: grid;
+        grid: auto;
+        justify-content: center;
+    }
+
+    .project-pic > img {
+        display: inline-flex;
+        flex: 1;
+        flex-direction: row;
+        margin: 0 auto;
+        min-width: 100%;
+    }
+
+    .project-link {
+        display: none;
+    }
 }
