@@ -9,11 +9,11 @@
     
     <link rel="stylesheet" type="text/css" href="./styles/contact-style.css">
     <link rel="stylesheet" type="text/css" href="./styles/previous-style.css">
-    <link rel="stylesheet" type="text/css" href="./styles/project-style.css">
     <link rel="stylesheet" type="text/css" href="./styles/skills-style.css">
     <link rel="stylesheet" type="text/css" href="./styles/current-style.css">
     <link rel="stylesheet" type="text/css" href="./styles/about-style.css">
     <link rel="stylesheet" type="text/css" href="./styles/hero-style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/project-style.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
 
     <title>Adam Gage</title>
@@ -172,12 +172,12 @@
                     <h4 class="project-name">Space Invaders</h4
                     <p>Class Based JavaScript</p>
                     <p>Games have always been a passion of mine so I could not think of a better introduction to learning JavaScript classes than recreating this classic game. A simple homage taught me the basics necessary to build something that can while away an hour or two.</p>
-                    <a id="si-game" href="" onClick="popOutWindow('./projects/Space Invader/game.html', 1024, 1024)">Pop up window</a> ||
-                    <a href="./projects/Space Invader/game.html" target="_blank"> New tab</a>
+                    <span class="project-link"><a id="si-game" href="" onClick="popOutWindow('./projects/Space Invader/game.html', 1024, 1024)">Pop up window</a> ||
+                    <a href="./projects/Space Invader/game.html" target="_blank"> New tab</a></span>
                 </div>
             </div>
             <div class="contain-projects">
-                <div class="bingo-project-pic">
+                <div class="bingo-project-pic project-pic">
                     <img class="bingo-img" src="./imgs/projects/bands-bingo.png" alt="Band Bingo">
                     <img class="bingo-img" src="./imgs/projects/movie-bingo.png" alt="Movie Bingo">
                     <img class="bingo-img" src="./imgs/projects/comedian-bingo.png" alt="Comedian Bingo">
@@ -187,8 +187,8 @@
                     <h4 class="project-name">Random Bingo</h4
                     <p>Created with Vanilla JavaScript</p>
                     <p>A small project where JavaScript is used to affect CSS properties as well as animating a background in pure css</p>
-                    <a id="bingo-link" href="" onClick="popOutWindow('./projects/Bingo/Bingo.html', 1024, 1024)">Pop up window</a> ||
-                    <a href="./projects/Bingo/Bingo.html" target="_blank"> New tab</a>
+                    <span class="project-link"></span><a id="bingo-link" href="" onClick="popOutWindow('./projects/Bingo/Bingo.html', 1024, 1024)">Pop up window</a> ||
+                    <a href="./projects/Bingo/Bingo.html" target="_blank"> New tab</a></span>
                 </div>
             </div>
             <div class="contain-projects">
@@ -263,6 +263,7 @@
     function popOutWindow (link, wide, tall) {
         window.open(link, 'popUpWindow', 'height='+wide+', width='+tall+', left=10, top=10, resizable=no, scrollbars=no, toolbar=no, menubar=no, location=no, directories=no, status=yes');
     };
+    
 </script>
 
 </html>
